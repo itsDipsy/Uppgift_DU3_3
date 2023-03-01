@@ -1,12 +1,32 @@
+<<<<<<< Updated upstream
+=======
 async function server_connection(request) {
-
     sever_connect_dom_start(); // Just a test for the CSS
-    let response = await fetch(request);
-    console.log(response)
-    let resource = await response.json();
-    console.log(resource);
-    server_connect_dom_end();
-    return resource;
+    try {
+        let response = await fetch(request);
+
+        if (response.status === 200) {
+
+        }
+        if (response.status === 418) {
+
+        }
+        else {
+
+        }
+
+        console.log(response)
+        let resource = await response.json();
+        console.log(resource);
+        server_connect_dom_end();
+        return resource;
+    }
+    catch (error) {
+        server_connect_dom_end(); // för att ta bort den senaste
+        document.querySelector("#error_message_dom").innerHTML = "There was an error try again";
+        document.querySelector("#error_message_dom").classList.add("error_message_dom");
+    }
+
 }
 
 function sever_connect_dom_start() {
@@ -23,3 +43,5 @@ function sever_connect_dom_start() {
 function server_connect_dom_end() {
     document.querySelector(".fetch_await_dom").remove();
 }
+
+>>>>>>> Stashed changes
