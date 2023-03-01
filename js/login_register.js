@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> register_login
 function init_login_register() {
     document.body.style.backgroundColor = "turquoise";
     let login_register_component = document.createElement("div");
@@ -75,9 +70,5 @@ function switch_reg_or_log() {
         document.querySelector(".toggle_link").innerHTML = "New to this site, click here to register"
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Stashed changes
->>>>>>> register_login
+
