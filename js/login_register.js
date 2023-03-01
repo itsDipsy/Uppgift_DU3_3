@@ -14,8 +14,6 @@ function init_login_register() {
             <p id="error_message_dom"></p>
             <button class="login_button">Login</button>
             <button class="register_button">Register</button>
-
-            <p class="toggle_link">New to this site, click here to register</p>
         </div>
     `;
     document.querySelector("main").appendChild(login_register_component);
@@ -45,30 +43,17 @@ function switch_reg_or_log() {
     document.querySelector(".toggle_link").classList.toggle("selected");
 
     if (document.querySelector(".toggle_link").classList.contains("selected")) {
-        let all_inputs = document.querySelectorAll("input");
-        all_inputs[0].value = "";
-        all_inputs[1].value = "";
+        clear_inputs();
 
         document.body.style.backgroundColor = "green";
 
-        document.querySelector(".login_button").style.display = "none";
-        document.querySelector(".register_button").style.display = "block";
-        document.querySelector(".slogan").innerHTML = "Register";
-        document.querySelector(".toggle_link").innerHTML = "Already got a account, login in here"
+        components_name_change(false, true) // Denna initiserar components namnen för register DOM:
     }
     else {
 
-        let all_inputs = document.querySelectorAll("input");
-        all_inputs[0].value = "";
-        all_inputs[1].value = "";
-
+        clear_inputs();
         document.body.style.backgroundColor = "turquoise";
+        components_name_change(true, false) // Denna initiserar components namnen för login DOM:sen
 
-        document.querySelector(".login_button").style.display = "block";
-        document.querySelector(".register_button").style.display = "none";
-        document.querySelector(".slogan").innerHTML = "Login";
-        document.querySelector(".toggle_link").innerHTML = "New to this site, click here to register"
     }
-
 }
-
