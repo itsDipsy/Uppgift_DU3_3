@@ -1,5 +1,8 @@
 async function server_connection(request) {
-    sever_connect_dom_start(); // Just a test for the CSS
+    clear_inputs();
+    reset_error_dom();
+    sever_connect_dom_start("server");
+
     try {
         let response = await fetch(request);
 
@@ -7,10 +10,13 @@ async function server_connection(request) {
 
         }
         if (response.status === 418) {
+            ima_teapot();
+        }
+        if (is_login_or_register_bool() === "register") {
 
         }
         else {
-
+            set_error_dom_message(true, false);
         }
 
         console.log(response)
@@ -20,25 +26,9 @@ async function server_connection(request) {
         return resource;
     }
     catch (error) {
+        clear_inputs();
         server_connect_dom_end(); // för att ta bort den senaste
-        document.querySelector("#error_message_dom").innerHTML = "There was an error try again";
-        document.querySelector("#error_message_dom").classList.add("error_message_dom");
+        set_error_dom_message(false, true)
     }
 
 }
-
-function sever_connect_dom_start() {
-    let await_dom = document.createElement("div");
-    await_dom.classList.add("fetch_await_dom");
-    await_dom.innerHTML = `
-        <div>
-            <h2>Fetching server ...</h2>
-        </div>
-    `;
-    document.body.appendChild(await_dom);
-}
-
-function server_connect_dom_end() {
-    document.querySelector(".fetch_await_dom").remove();
-}
-
