@@ -68,11 +68,11 @@ function ima_teapot() {
     tea_pot_dom.innerHTML = `
         <div>
             <h2>The server thinks its not a teapot</h2>
-            <button class="teapot_exit">Exit</button>
+            <button class="exit">Exit</button>
         </div>
     `
     document.body.appendChild(tea_pot_dom);
-    document.querySelector(".teapot_exit").addEventListener("click", () => {
+    document.querySelector(".exit").addEventListener("click", () => {
         tea_pot_dom.remove();
     })
 }
