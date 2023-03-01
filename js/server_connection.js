@@ -7,20 +7,26 @@ async function server_connection(request) {
     try {
         let response = await fetch(request);
 
-        if (response.status === 200) {
+        switch (response.status) {
+            case 418:
+                ima_teapot();
+                break;
 
+            case 400:
+                set_error_dom_message(true, false);
+                break;
+
+            case 409:
+                console.log("409 fix the rest")
+                break;
         }
-        if (response.status === 418) {
-            ima_teapot();
-        }
+
         if (is_login_or_register_bool() === "register") {
-
-        }
-        else {
-            set_error_dom_message(true, false);
+            // hära ska wrong domen fucntionen vara
+            reset_error_dom(); // Denna if sats gör så att det inte poppar up en wrong message som i login om allt är tomt eller fel
         }
 
-        console.log(response)
+
         let resource = await response.json();
         console.log(resource);
         server_connect_dom_end();
@@ -31,5 +37,4 @@ async function server_connection(request) {
         server_connect_dom_end(); // för att ta bort den senaste
         set_error_dom_message(false, true)
     }
-
 }
