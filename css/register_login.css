@@ -1,0 +1,18 @@
+@font-face {
+    font-family: regular;
+    src: url("../fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rbold;
+    src: url("../fonts/RobotoCondensed-Bold.ttf");
+}
+
+@font-face {
+    font-family: Rlight;
+    src: url("../fonts/RobotoCondensed-Light.ttf");
+}
+
+body {
+    margin: 0;
+}
