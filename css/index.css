@@ -48,7 +48,7 @@ nav {
 
 .fetch_await_dom {
     position: absolute;
-    bottom: 50px;
+    bottom: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
