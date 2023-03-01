@@ -1,18 +1,43 @@
-@font-face {
-    font-family: regular;
-    src: url("../fonts/RobotoCondensed-Regular.ttf");
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
 }
 
-@font-face {
-    font-family: Rbold;
-    src: url("../fonts/RobotoCondensed-Bold.ttf");
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
 }
 
-@font-face {
-    font-family: Rlight;
-    src: url("../fonts/RobotoCondensed-Light.ttf");
+input {
+    margin-top: 10px;
+    width: 80vw;
+    height: 25px;
+
 }
 
-body {
-    margin: 0;
+.input_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_wrapper div {
+    margin-top: 10px;
+}
+
+button {
+    width: 80vw;
+    height: 30px;
+}
+
+.toggle_link {
+    color: rgb(58, 16, 78);
+    text-decoration: underline;
 }

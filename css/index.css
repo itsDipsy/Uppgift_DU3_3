@@ -1,0 +1,84 @@
+@font-face {
+    font-family: regular;
+    src: url("../fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rbold;
+    src: url("../fonts/RobotoCondensed-Bold.ttf");
+}
+
+@font-face {
+    font-family: Rlight;
+    src: url("../fonts/RobotoCondensed-Light.ttf");
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    font-family: regular;
+}
+
+.slogan {
+    font-family: Rbold;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+}
+
+nav {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.dog_logo {
+    background-image: url("../media/logo.png");
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.fetch_await_dom {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.514);
+}
+
+.fetch_await_dom>div {
+    background-color: white;
+    border: 1px solid black;
+    width: 250px;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 260px;
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+}
+
+a {
+    font-family: Rlight;
+}
