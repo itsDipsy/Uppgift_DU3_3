@@ -58,12 +58,33 @@ nav {
 }
 
 .fetch_await_dom>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: white;
     border: 1px solid black;
     width: 250px;
-    height: 100px;
+    min-height: 140px;
     border-radius: 20px;
     text-align: center;
+}
+
+.error_message_dom {
+    text-align: center;
+    width: 75vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    color: red;
+    background-color: white;
+    height: 12px;
+}
+
+.teapot_exit {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -71,7 +92,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    min-height: 260px;
+    min-height: 150px;
 }
 
 p {

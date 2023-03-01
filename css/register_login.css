@@ -42,12 +42,10 @@ button {
     text-decoration: underline;
 }
 
-.error_message_dom {
-    text-align: center;
-    width: 75vw;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: red;
-    background-color: white;
-    height: 15px;
+.link_wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
