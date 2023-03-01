@@ -1,18 +1,3 @@
-<<<<<<< Updated upstream
-function init_login_register() {
-    let login_register_component = document.createElement("div");
-    login_register_component.innerHTML = `
-        <div class="input_wrapper">
-            <div>Username: </div>
-            <input type="text">´
-            <div>Password: </div>
-            <input type="text">
-            <p class="error_message_dom"></p>
-            <button class="login_button">Login</button>
-            <button class="register_button">Register</button>
-=======
-<<<<<<< Updated upstream
-=======
 function init_login_register() {
     document.body.style.backgroundColor = "turquoise";
     let login_register_component = document.createElement("div");
@@ -31,18 +16,12 @@ function init_login_register() {
             <button class="register_button">Register</button>
 
             <p class="toggle_link">New to this site, click here to register</p>
->>>>>>> Stashed changes
         </div>
     `;
     document.querySelector("main").appendChild(login_register_component);
 
     document.querySelector(".register_button").style.display = "none";
 
-<<<<<<< Updated upstream
-    document.querySelector(".login_button").addEventListener("click", server_connection);
-    document.querySelector(".register_button").addEventListener("click", server_connection);
-}
-=======
     document.querySelector(".toggle_link").addEventListener("click", switch_reg_or_log)
 
 
@@ -54,7 +33,7 @@ function init_login_register() {
 
     document.querySelector(".register_button").addEventListener("click", () => {
         let request_register = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${document.querySelector(".username").value}&password=${document.querySelector(".password").value}`);
-        server_connection(request_login);
+        server_connection(request_register);
     });
 }
 
@@ -79,5 +58,3 @@ function switch_reg_or_log() {
     }
 
 }
->>>>>>> Stashed changes
->>>>>>> Stashed changes
