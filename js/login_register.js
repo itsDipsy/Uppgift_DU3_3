@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> register_login
 function init_login_register() {
     document.body.style.backgroundColor = "turquoise";
     let login_register_component = document.createElement("div");
@@ -8,10 +13,10 @@ function init_login_register() {
                 <div>Username: </div>
                 <input class="username" type="text">
                 <div>Password: </div>
-                <input class="password" type="password">        
+                <input class="password" type="password">
             </div>
-            
-            <p class="error_message_dom"></p>
+
+            <p id="error_message_dom"></p>
             <button class="login_button">Login</button>
             <button class="register_button">Register</button>
 
@@ -39,16 +44,29 @@ function init_login_register() {
 
 
 function switch_reg_or_log() {
+    document.querySelector("#error_message_dom").classList.remove("error_message_dom");
+    document.querySelector("#error_message_dom").innerHTML = "";
+
     document.querySelector(".toggle_link").classList.toggle("selected");
 
     if (document.querySelector(".toggle_link").classList.contains("selected")) {
+        let all_inputs = document.querySelectorAll("input");
+        all_inputs[0].value = "";
+        all_inputs[1].value = "";
+
         document.body.style.backgroundColor = "green";
+
         document.querySelector(".login_button").style.display = "none";
         document.querySelector(".register_button").style.display = "block";
         document.querySelector(".slogan").innerHTML = "Register";
         document.querySelector(".toggle_link").innerHTML = "Already got a account, login in here"
     }
     else {
+
+        let all_inputs = document.querySelectorAll("input");
+        all_inputs[0].value = "";
+        all_inputs[1].value = "";
+
         document.body.style.backgroundColor = "turquoise";
 
         document.querySelector(".login_button").style.display = "block";
@@ -57,4 +75,9 @@ function switch_reg_or_log() {
         document.querySelector(".toggle_link").innerHTML = "New to this site, click here to register"
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Stashed changes
+>>>>>>> register_login
