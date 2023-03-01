@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 async function server_connection(request) {
 
     sever_connect_dom_start(); // Just a test for the CSS
@@ -25,4 +23,3 @@ function sever_connect_dom_start() {
 function server_connect_dom_end() {
     document.querySelector(".fetch_await_dom").remove();
 }
->>>>>>> Stashed changes
