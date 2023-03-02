@@ -1,6 +1,8 @@
 function reset_error_dom() {
-    document.querySelector("#error_message_dom").innerHTML = "";
-    document.querySelector("#error_message_dom").classList.remove("error_message_dom");
+    if (document.querySelector("#error_message_dom") !== null) {
+        document.querySelector("#error_message_dom").innerHTML = "";
+        document.querySelector("#error_message_dom").classList.remove("error_message_dom");
+    }
 }
 
 function set_error_dom_message(wrong_crendt, error) {
@@ -14,23 +16,25 @@ function set_error_dom_message(wrong_crendt, error) {
     }
 }
 
-function sever_connect_dom_start(text_server, text_images) {
+function server_connect_dom_start(server, dog) {
     let await_dom = document.createElement("div");
     await_dom.classList.add("fetch_await_dom");
-    if (text_server !== "") {
+    if (server === true) {
         await_dom.innerHTML = `
             <div>
-                <h2>Fetching ${text_server} ...</h2>
+                <h2>Fetching server ...</h2>
             </div>
         `;
     }
-    else {
+
+    if (dog === true) {
         await_dom.innerHTML = `
         <div>
-            <h2>Fetching ${text_images} ...</h2>
+            <h2>Fetching image ...</h2>
         </div>
-    `;
+        `;
     }
+
     document.body.appendChild(await_dom);
 }
 
@@ -58,8 +62,10 @@ function components_name_change(is_login, is_register) {
 
 function clear_inputs() {
     let all_inputs = document.querySelectorAll("input");
-    all_inputs[0].value = "";
-    all_inputs[1].value = "";
+    if (all_inputs[0] !== undefined && all_inputs[1] !== undefined) {
+        all_inputs[0].value = "";
+        all_inputs[1].value = "";
+    }
 }
 
 function ima_teapot() {
