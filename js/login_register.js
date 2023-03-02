@@ -41,9 +41,17 @@ function init_login_register() {
     });
 
     document.querySelector(".register_button").addEventListener("click", async () => {
-        let object =
+        let http_request_object = {
+            method: "POST",
+            headers: { "Content-type": "application/json; charset=UTF-8" },
+            body: JSON.stringify({
+                action: "register",
+                user_name: input_data_obj.user_name,
+                password: input_data_obj.password,
+            }),
+        }
 
-            let request_register = new Request(`https://teaching.maumt.se/apis/access/`, object);
+        let request_register = new Request(`https://teaching.maumt.se/apis/access/`, http_request_object);
         server_connect_dom_start(true, false);
         let resource = await server_connection(request_register);
         server_connect_dom_end();
