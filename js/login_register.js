@@ -46,8 +46,8 @@ function init_login_register() {
             headers: { "Content-type": "application/json; charset=UTF-8" },
             body: JSON.stringify({
                 action: "register",
-                user_name: input_data_obj.user_name,
-                password: input_data_obj.password,
+                user_name: document.querySelector(".username").value,
+                password: document.querySelector(".password").value,
             }),
         }
 
