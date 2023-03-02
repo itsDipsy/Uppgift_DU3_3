@@ -12,11 +12,22 @@ async function server_connection(request) {
                 break;
 
             case 400:
-                set_error_dom_message(true, false);
+                register_complete_or_not(response.ok);
                 break;
 
             case 409:
-                console.log("409 fix the rest")
+                let register_reject_dom = document.createElement("div");
+                register_reject_dom.classList.add("fetch_await_dom");
+                register_reject_dom.innerHTML = `
+                <div>
+                    <h2>That name is already taken</h2>
+                    <button class="exit">Exit</button>
+                </div>
+                `;
+                document.body.appendChild(register_reject_dom);
+                document.querySelector(".exit").addEventListener("click", () => {
+                    register_reject_dom.remove();
+                })
                 break;
         }
 
