@@ -1,5 +1,3 @@
-
-
 function init_quiz_component() {
     console.log(localStorage)
     document.querySelector("main").innerHTML = "";

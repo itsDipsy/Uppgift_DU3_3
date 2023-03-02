@@ -29,7 +29,9 @@ function init_login_register() {
 
     document.querySelector(".login_button").addEventListener("click", async () => {
         let request_login = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${document.querySelector(".username").value}&password=${document.querySelector(".password").value}`);
+        server_connect_dom_start(true, false)
         let resource = await server_connection(request_login);
+        server_connect_dom_end();
         if (resource.data !== null) {
             init_quiz_component(resource.data.user_name);
         }
@@ -39,8 +41,12 @@ function init_login_register() {
     });
 
     document.querySelector(".register_button").addEventListener("click", async () => {
-        let request_register = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${document.querySelector(".username").value}&password=${document.querySelector(".password").value}`);
-        server_connection(request_register);
+        let object =
+
+            let request_register = new Request(`https://teaching.maumt.se/apis/access/`, object);
+        server_connect_dom_start(true, false);
+        let resource = await server_connection(request_register);
+        server_connect_dom_end();
     });
 }
 

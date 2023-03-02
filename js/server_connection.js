@@ -1,7 +1,6 @@
 async function server_connection(request) {
     clear_inputs();
     reset_error_dom();
-    sever_connect_dom_start("server");
 
     try {
         let response = await fetch(request);
@@ -28,12 +27,10 @@ async function server_connection(request) {
 
         let resource = await response.json();
         console.log(resource);
-        server_connect_dom_end();
         return resource;
     }
     catch (error) {
         clear_inputs();
-        server_connect_dom_end(); // för att ta bort den senaste
         set_error_dom_message(false, true)
     }
 }
