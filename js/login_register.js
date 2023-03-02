@@ -66,35 +66,3 @@ function switch_reg_or_log() {
 
     }
 }
-
-function done_or_failed_register(resource) {
-    if (resource.data === true) {
-        let good_request_dom = document.createElement("div");
-        good_request_dom.classList.add("fetch_await_dom");
-        good_request_dom.innerHTML = `
-            <div>
-                <h2>Register Complete</h2>
-                <button class="exit">Exit</button>
-            </div>
-        `
-        document.body.appendChild(good_request_dom);
-        document.querySelector(".exit").addEventListener("click", () => {
-            good_request_dom.remove();
-        })
-    }
-    else {
-        let bad_request_dom = document.createElement("div");
-        bad_request_dom.classList.add("fetch_await_dom");
-        bad_request_dom.innerHTML = `
-            <div>
-                <h2>That name is already taken</h2>
-                <button class="exit">Exit</button>
-            </div>
-        `
-        document.body.appendChild(bad_request_dom);
-        document.querySelector(".exit").addEventListener("click", () => {
-            bad_request_dom.remove();
-        })
-    }
-}
-
