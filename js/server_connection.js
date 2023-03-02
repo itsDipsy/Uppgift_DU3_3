@@ -6,9 +6,6 @@ async function server_connection(request) {
         let response = await fetch(request);
         console.log(response);
         switch (response.status) {
-            case 200:
-                register_complete_or_not(response.ok)
-                break;
             case 418:
 
                 ima_teapot();
@@ -38,6 +35,9 @@ async function server_connection(request) {
         if (is_login_or_register_bool() === "register") {
             // hära ska wrong domen fucntionen vara
             reset_error_dom(); // Denna if sats gör så att det inte poppar up en wrong message som i login om allt är tomt eller fel// gör hela complete dom:en eller reject dom:en
+            if (response.status === 200) {
+                register_complete_or_not(response.ok);
+            }
         }
 
 
