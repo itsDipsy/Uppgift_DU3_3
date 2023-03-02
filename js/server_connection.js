@@ -11,10 +11,6 @@ async function server_connection(request) {
                 ima_teapot();
                 break;
 
-            case 400:
-                register_complete_or_not(response.ok);
-                break;
-
             case 409:
 
                 let taken_name_dom = document.createElement("div");
@@ -36,6 +32,10 @@ async function server_connection(request) {
             // hära ska wrong domen fucntionen vara
             reset_error_dom(); // Denna if sats gör så att det inte poppar up en wrong message som i login om allt är tomt eller fel// gör hela complete dom:en eller reject dom:en
             if (response.status === 200) {
+                register_complete_or_not(response.ok);
+            }
+
+            if (response.status === 400) {
                 register_complete_or_not(response.ok);
             }
         }
