@@ -33,7 +33,8 @@ function init_login_register() {
         let resource = await server_connection(request_login);
         server_connect_dom_end();
         if (resource.data !== null) {
-            init_quiz_component(resource.data.user_name);
+            localStorage.setItem("user_logged_in", resource.data.user_name);
+            init_quiz_component();
         }
         if (resource.data === null) {
             set_error_dom_message(true, false)
@@ -55,6 +56,7 @@ function init_login_register() {
         server_connect_dom_start(true, false);
         let resource = await server_connection(request_register);
         server_connect_dom_end();
+
         register_complete_or_not(resource.data); // gör hela complete dom:en eller reject dom:en
     });
 }
