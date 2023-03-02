@@ -68,6 +68,7 @@ nav {
     min-height: 140px;
     border-radius: 20px;
     text-align: center;
+    padding: 10px;
 }
 
 .error_message_dom {

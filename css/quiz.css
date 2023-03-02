@@ -40,10 +40,14 @@
 .image {
     width: 250px;
     height: 300px;
-    border: 1px solid black;
     margin-top: 20px;
     margin-bottom: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
 }
+
 
 .quiz_box_wrapper {
     display: grid;
@@ -60,9 +64,11 @@
     height: 100%;
     border: 1px solid black;
     text-align: center;
-    padding-top: 5px;
     background-color: white;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .quiz_box:hover {
