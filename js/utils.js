@@ -92,3 +92,33 @@ function is_login_or_register_bool() {
     }
 }
 
+function register_complete_or_not(data) {
+    if (data === true) {
+        let register_complete_dom = document.createElement("div");
+        register_complete_dom.classList.add("fetch_await_dom");
+        register_complete_dom.innerHTML = `
+                <div>
+                    <h2>Register complete</h2>
+                    <button class="exit">Exit</button>
+                </div>
+            `
+        document.body.appendChild(register_complete_dom);
+        document.querySelector(".exit").addEventListener("click", () => {
+            register_complete_dom.remove();
+        })
+    }
+    else {
+        let register_reject_dom = document.createElement("div");
+        register_reject_dom.classList.add("fetch_await_dom");
+        register_reject_dom.innerHTML = `
+                <div>
+                    <h2>That name is already taken</h2>
+                    <button class="exit">Exit</button>
+                </div>
+            `
+        document.body.appendChild(register_reject_dom);
+        document.querySelector(".exit").addEventListener("click", () => {
+            register_reject_dom.remove();
+        })
+    }
+}

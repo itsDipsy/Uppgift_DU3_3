@@ -55,6 +55,7 @@ function init_login_register() {
         server_connect_dom_start(true, false);
         let resource = await server_connection(request_register);
         server_connect_dom_end();
+        register_complete_or_not(resource.data); // gör hela complete dom:en eller reject dom:en
     });
 }
 

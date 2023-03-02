@@ -4,7 +4,7 @@ async function server_connection(request) {
 
     try {
         let response = await fetch(request);
-
+        console.log(response);
         switch (response.status) {
             case 418:
                 ima_teapot();
@@ -26,7 +26,6 @@ async function server_connection(request) {
 
 
         let resource = await response.json();
-        console.log(resource);
         return resource;
     }
     catch (error) {
