@@ -112,7 +112,7 @@ function register_complete_or_not(data) {
         register_reject_dom.classList.add("fetch_await_dom");
         register_reject_dom.innerHTML = `
                 <div>
-                    <h2>Bad request</h2>
+                    <h2>No username or password</h2>
                     <button class="exit">Exit</button>
                 </div>
             `
