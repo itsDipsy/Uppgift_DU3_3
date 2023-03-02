@@ -58,7 +58,7 @@ function get_dogs() {
 async function get_image(right_dog_url) {
 
     server_connect_dom_start(false, true)
-    document.querySelector(".image").style.backgroundImage = "url(../media/logo.png)";
+    document.querySelector(".image").style.backgroundImage = "url(./media/logo.png)";
     let request = new Request(`https://dog.ceo/api/breed/${right_dog_url}/images/random`);
     let resource = await server_connection(request);
     document.querySelector(".image").style.backgroundImage = `url(${resource.message})`;
