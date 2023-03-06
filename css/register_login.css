@@ -26,15 +26,20 @@ input {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .input_wrapper div {
     margin-top: 10px;
+    font-family: regular;
+    font-size: 20px;
 }
 
 button {
     width: 80vw;
-    height: 30px;
+    height: 35px;
+    font-family: regular;
+    font-size: 20px;
 }
 
 .toggle_link {

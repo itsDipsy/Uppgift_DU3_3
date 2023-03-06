@@ -18,7 +18,10 @@ body {
     min-height: 100vh;
     position: relative;
     font-family: regular;
+    overflow-y: scroll;
 }
+
+
 
 .slogan {
     font-family: Rbold;
@@ -26,7 +29,7 @@ body {
 
 header {
     width: 100vw;
-    height: 10vh;
+    height: 70px;
 }
 
 nav {
