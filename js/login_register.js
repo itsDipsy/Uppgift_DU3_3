@@ -8,7 +8,7 @@ function init_login_register() {
         <div class="input_wrapper">
             <h1 class="slogan">Login</h1>
             <div>
-                <div>Username: </div>
+                <div>User Name: </div>
                 <input class="username" type="text">
                 <div>Password: </div>
                 <input class="password" type="password">

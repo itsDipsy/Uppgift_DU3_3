@@ -49,6 +49,8 @@ button {
 .toggle_link {
     color: rgb(58, 16, 78);
     text-decoration: underline;
+    font-family: regular;
+    font-size: 18px;
 }
 
 .link_wrapper {
