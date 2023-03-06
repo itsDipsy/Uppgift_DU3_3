@@ -18,7 +18,9 @@ input {
     margin-top: 10px;
     width: 80vw;
     height: 25px;
-
+    font-family: regular;
+    font-size: 18px;
+    
 }
 
 .input_wrapper {
@@ -26,6 +28,8 @@ input {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 300px;
     
 }
 

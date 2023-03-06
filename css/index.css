@@ -29,7 +29,7 @@ body {
 
 header {
     width: 100vw;
-    height: 70px;
+    height: 20vh;
 }
 
 nav {
@@ -94,9 +94,9 @@ nav {
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     width: 100vw;
-    height: 150px;
+    height: 90px;
 }
 
 p {
